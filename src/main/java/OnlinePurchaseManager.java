@@ -11,11 +11,11 @@ public class OnlinePurchaseManager
   */
   public int countElectronicsByMaker(String maker)
   {
-   for (int i = 0; i < purchases.size(); i++){
-	if(purchases.get(i).isElectronic() &&
-purchases.get(i).getMaker().equals(maker)){
-count ++;
-}
+int num = 0;
+for(Gizmo g: purchases)
+	if(g.isElectronic() && g.getMaker().equals(maker))
+		num++;
+	  return num;
   }
   
   /** Returns true if any pair of adjacent purchased Gizmo objects are
